@@ -1,185 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aiden's Birthday Invitation</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background: url("Dino2.webp") no-repeat center center fixed;
-        background-size: contain;
-        background-color: #000;
-        color: #fff;
-        text-align: center;
-      }
-      header {
-        max-width: 800px; /* optional maximum width */
-        margin: 0 auto; /* center horizontally on the screen */
-        padding: 20px;
-        text-align: center; /* center text inside */
-        border-radius: 15px;
-        padding: 20px;
-      }
-      header h1 {
-        margin: 0;
-        font-size: 2.5em;
-        font-weight: bold; /* makes text strong */
-        color: #fff;
-        text-shadow: 0 0 5px #ffcc00, 0 0 10px #ff9900, 0 0 20px #ff6600;
-        animation: glow 2s infinite alternate;
-      }
-      @keyframes glow {
-        0% {
-          text-shadow: 0 0 5px #ffcc00, 0 0 10px #ff9900, 0 0 20px #ff6600;
-        }
-        100% {
-          text-shadow: 0 0 10px #ff6600, 0 0 20px #ff3300, 0 0 30px #ff0000;
-        }
-      }
-      .content {
-        padding: 20px;
-        display: inline-block;
-        margin-top: 20px;
-      }
-      .content h2 {
-        font-size: 2em;
-        font-weight: bold; /* strong text */
-        color: #cc004e; /* bright green base */
-        text-shadow: 0 0 5px #00994d, 0 0 10px #00cc66, 0 0 20px #00ff99;
-        animation: glow-h2 2s infinite alternate;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aiden's Birthday Invitation</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url("Dino2.webp") no-repeat center center fixed;
+  background-size: contain;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
-      @keyframes glow-h2 {
-        0% {
-          text-shadow: 0 0 5px #00994d, 0 0 10px #00cc66, 0 0 20px #00ff99;
-        }
-        100% {
-          text-shadow: 0 0 10px #00cc66, 0 0 20px #00ff99, 0 0 30px #66ffcc;
-        }
-      }
+header {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  border-radius: 15px;
+}
 
-      .content p {
-        font-size: 1.5em;
-        margin: 10px 0;
-      }
-      .details {
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 5px #ffcc00, 0 0 10px #ff9900, 0 0 20px #ff6600;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 5px #ffcc00, 0 0 10px #ff9900, 0 0 20px #ff6600; }
+  100% { text-shadow: 0 0 10px #ff6600, 0 0 20px #ff3300, 0 0 30px #ff0000; }
+}
+
+.content {
+  margin: 20px auto;
+  text-align: center;
+  max-width: 800px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content_h2 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #cc004e;
+  text-shadow: 0 0 5px #00994d, 0 0 10px #00cc66, 0 0 20px #00ff99;
+  animation: glow-h2 2s infinite alternate;
+}
+
+@keyframes glow-h2 {
+  0% { text-shadow: 0 0 5px #00994d, 0 0 10px #00cc66, 0 0 20px #00ff99; }
+  100% { text-shadow: 0 0 10px #00cc66, 0 0 20px #00ff99, 0 0 30px #66ffcc; }
+}
+
+.content_text {
+  font-weight: bold;
+  color: #000;
+  text-shadow: 0 0 5px #555, 0 0 10px #888, 0 0 15px #aaa, 0 0 20px #fff;
+  animation: details-pop 2s infinite alternate;
+  display: block;
+  margin: 10px 0;
+  font-size: 1.5em;
+}
+
+.details {
   margin: 20px 0;
   padding: 15px;
   display: inline-block;
   text-align: center;
+  font-size: 1.7em; /* increased font size */
+}
+.details a {
+  color: #000; /* same as date/time text */
+  text-decoration: none; /* remove underline for consistency */
+  font-weight: bold; /* match date/time weight */
+  text-shadow: 0 0 5px #555, 0 0 10px #888, 0 0 15px #aaa, 0 0 20px #fff; /* same glowing effect */
 }
 
 .details p {
   margin: 5px 0;
   font-weight: bold;
-  color: #000; /* bold black text */
-  text-shadow: 
-    0 0 5px #555, 
-    0 0 10px #888, 
-    0 0 15px #aaa, 
-    0 0 20px #fff; /* glowing white/gray outline for pop */
+  color: #000;
+  text-shadow: 0 0 5px #555, 0 0 10px #888, 0 0 15px #aaa, 0 0 20px #fff;
+  /* animation: details-pop 2s infinite alternate; */
+}
+
+.parking {
+  font-weight: bold;
+  color: #000;
+  text-shadow: 0 0 5px #555, 0 0 10px #888, 0 0 15px #aaa, 0 0 20px #fff;
+  text-align: center;
+  display: block;
+  margin: 50px auto 30px auto;
+  max-width: 800px;
+  font-size: 1.7em; /* increased font size */
   animation: details-pop 2s infinite alternate;
 }
 
-@keyframes details-pop {
-  0% {
-    transform: scale(1);
-    text-shadow: 0 0 5px #555, 0 0 10px #888, 0 0 15px #aaa, 0 0 20px #fff;
-  }
-  100% {
-    transform: scale(1.05); /* subtle pop */
-    text-shadow: 0 0 10px #888, 0 0 20px #aaa, 0 0 25px #ccc, 0 0 40px #fff;
-  }
-}
-
 footer {
-  position: fixed;
-  bottom: 20px; /* lifts it up from the bottom */
-  left: 50%; /* center horizontally */
-  transform: translateX(-50%); /* truly center */
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1.6em; /* increased font size */
   font-weight: bold;
-  color: #000; /* bold black text */
-  text-shadow: 
-    0 0 5px #555, 
-    0 0 10px #888, 
-    0 0 15px #aaa, 
-    0 0 20px #fff; /* glowing white/gray outline */
-  animation: footer-pop 2s infinite alternate;
-}
-
-footer p {
-  margin: 5px 0;
+  color: #000;
+  text-shadow: 0 0 5px #555, 0 0 10px #888, 0 0 15px #aaa, 0 0 20px #fff;
+  margin-bottom: 20px;
 }
 
 footer strong {
-  color: #000; /* keep strong text black */
-  text-shadow: 
-    0 0 5px #555, 
-    0 0 10px #888, 
-    0 0 15px #aaa, 
-    0 0 25px #fff;
+  color: #000;
+  text-shadow: 0 0 5px #555, 0 0 10px #888, 0 0 15px #aaa, 0 0 25px #fff;
 }
 
-@keyframes footer-pop {
-  0% {
-    transform: translateX(-50%) scale(1);
-    text-shadow: 0 0 5px #555, 0 0 10px #888, 0 0 15px #aaa, 0 0 20px #fff;
-  }
-  100% {
-    transform: translateX(-50%) scale(1.05); /* subtle pop */
-    text-shadow: 0 0 10px #888, 0 0 20px #aaa, 0 0 25px #ccc, 0 0 40px #fff;
-  }
+@keyframes details-pop {
+  0% { transform: scale(1); text-shadow: 0 0 5px #555, 0 0 10px #888, 0 0 15px #aaa, 0 0 20px #fff; }
+  100% { transform: scale(1.05); text-shadow: 0 0 10px #888, 0 0 20px #aaa, 0 0 25px #ccc, 0 0 40px #fff; }
 }
 
 
+  </style>
+</head>
+<body>
+  <header>
+    <h1>You're Invited!</h1>
+  </header>
 
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>You're Invited!</h1>
-    </header>
-    <div class="content">
-      <h2>Aiden's Birthday Party</h2>
-      <p>Come join us for a day full of fun, laughter, and celebration!</p>
+  <div class="content">
+    <div>
+      <h2 class="content_h2">Aiden's 5th Birthday Party</h2>
+      <p class="content_text">
+        We know it’s a last-minute invite, but we’re super excited to hang out with you! We’ll have a bounce house, yard games, a BBQ, cake, and lots of laughter — it’s going to be a blast! Can’t wait to celebrate Aiden's birthday with you!
+      </p>
+
       <div class="details">
-        <p><strong>Date:</strong> Sunday, September 14</p>
-        <p><strong>Time:</strong> 1:00 PM - 5:00 PM</p>
-        <strong>Location:</strong>
-        <a
-          href="https://www.google.com/maps/search/?api=1&query=917+Lamberts+Mill+Road+Westfield+NJ"
-          target="_blank"
-          style="color: #ffcc00; text-decoration: underline"
-        >
-          917 Lamberts Mill Road Westfield, NJ 07090
-        </a>
-        <p>
-          Please park at
-          <a
-            href="https://www.google.com/maps/search/?api=1&query=Willow+Grove+Road+Westfield+NJ"
-            target="_blank"
-            style="color: #ffcc00; text-decoration: underline"
-          >
-            Willow Grove Road
-          </a>
-          as we will be using the driveway for the party activities. Click
-          <a
-            href="/Party Map.pdf"
-            target="_blank"
-            style="color: #ffcc00; text-decoration: underline"
-          >
-            here </a
-          >for the map.
-        </p>
-        </div>
-    <footer>
-      <p>RSVP by September 8th to Valerie @ <strong>201-965-0029</strong></p>
-      <p>We can't wait to celebrate with you!</p>
-    </footer>
-  </body>
+  <p><strong>Date:</strong> Sunday, September 14</p>
+  <p><strong>Time:</strong> 1:00 PM - 5:00 PM</p>
+  <p><strong>Location:</strong>
+    <a href="https://www.google.com/maps/search/?api=1&query=917+Lamberts+Mill+Road+Westfield+NJ" target="_blank">
+      917 Lamberts Mill Road Westfield, NJ 07090
+    </a>
+  </p>
+</div>
+    </div>
+
+    <!-- Parking moved closer to footer -->
+    <p class="parking">
+      Please park at 
+      <a href="https://www.google.com/maps/search/?api=1&query=Willow+Grove+Road+Westfield+NJ" target="_blank" style="color: #ffcc00; text-decoration: underline">
+        Willow Grove Road
+      </a> 
+      as we will be using the driveway for the party activities. Click 
+      <a href="/Party Map.pdf" target="_blank" style="color: #ffcc00; text-decoration: underline">here</a> for the map.
+    </p>
+  </div>
+
+  <footer>
+    <p class="rsvp">RSVP by September 8th to Valerie @ <strong>201-965-0029</strong></p>
+  </footer>
+</body>
 </html>
